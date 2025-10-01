@@ -6,13 +6,13 @@
 
 Crea un archivo `.env.local` en la raíz del proyecto con las siguientes variables:
 
-```env
+\`\`\`env
 # Kommo CRM Configuration
 KOMMO_SUBDOMAIN=tu_subdominio_kommo
 KOMMO_TOKEN=tu_token_de_larga_duracion_kommo
 KOMMO_PIPELINE_ID=tu_pipeline_id_opcional
 KOMMO_STATUS_ID=tu_status_id_opcional
-```
+\`\`\`
 
 ### 2. Obtener Credenciales de Kommo
 
@@ -73,7 +73,7 @@ Para mapear correctamente los campos del formulario, puedes configurar campos pe
 
 El formulario envía los siguientes datos a Kommo:
 
-```json
+\`\`\`json
 {
   "nombre": "Juan Pérez",
   "whatsapp": "+573001234567",
@@ -81,7 +81,7 @@ El formulario envía los siguientes datos a Kommo:
   "fondo": "porvenir",
   "valor": "5-10"
 }
-```
+\`\`\`
 
 ## 📊 Mapeo de Valores
 

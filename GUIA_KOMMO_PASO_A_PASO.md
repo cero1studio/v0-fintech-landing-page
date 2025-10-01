@@ -27,9 +27,9 @@ Es la parte personalizada de tu URL de Kommo.
 - Si tu URL es: `https://ventas2024.kommo.com` → Subdominio: `ventas2024`
 
 ### ✅ Resultado:
-```
+\`\`\`
 KOMMO_SUBDOMAIN=tu_subdominio_aqui
-```
+\`\`\`
 
 ---
 
@@ -65,9 +65,9 @@ KOMMO_SUBDOMAIN=tu_subdominio_aqui
 5. **Guarda este token** en un lugar seguro (no se puede recuperar)
 
 ### ✅ Resultado:
-```
+\`\`\`
 KOMMO_TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.tu_token_completo_aqui...
-```
+\`\`\`
 
 ---
 
@@ -84,15 +84,15 @@ Es el flujo de trabajo donde aparecerán tus leads (ej: "Ventas", "Marketing", e
 5. **Busca** el número después de `/pipelines/` o `/pipeline/`
 
 ### Ejemplo de URL:
-```
+\`\`\`
 https://miempresa.kommo.com/settings/pipelines/123456
-```
+\`\`\`
 En este caso, el Pipeline ID es: `123456`
 
 ### ✅ Resultado:
-```
+\`\`\`
 KOMMO_PIPELINE_ID=123456
-```
+\`\`\`
 
 ---
 
@@ -115,9 +115,9 @@ Es el estado inicial donde aparecerán los nuevos leads (ej: "Nuevo", "Contactad
 5. **Busca** el `data-id` o `data-status-id`
 
 ### ✅ Resultado:
-```
+\`\`\`
 KOMMO_STATUS_ID=789012
-```
+\`\`\`
 
 ---
 
@@ -128,21 +128,21 @@ KOMMO_STATUS_ID=789012
 2. **Reemplaza** los valores de ejemplo con tus datos reales
 
 ### 5.2 Ejemplo de configuración completa:
-```env
+\`\`\`env
 # Kommo CRM Configuration
 KOMMO_SUBDOMAIN=miempresa
 KOMMO_TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguYW1vY3JtLnJ1Iiwic3ViIjoiMTIzNDU2Nzg5MCIsImF1ZCI6Imh0dHBzOi8vYXBpLmFtb2NybS5ydSIsImV4cCI6MTY5OTk5OTk5OSwiaWF0IjoxNjk5OTk5OTk5LCJqdGkiOiJhYmNkZWYxMjM0NTY3ODkwIn0.signature_here
 KOMMO_PIPELINE_ID=123456
 KOMMO_STATUS_ID=789012
-```
+\`\`\`
 
 ### 5.3 Guardar y reiniciar
 1. **Guarda** el archivo
 2. **Reinicia** el servidor de desarrollo:
-   ```bash
+   \`\`\`bash
    # Detén el servidor (Ctrl+C)
    npm run dev
-   ```
+   \`\`\`
 
 ---
 
