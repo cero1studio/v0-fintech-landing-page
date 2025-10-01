@@ -3,13 +3,11 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { CheckCircle, Clock, Star, Shield, Zap, Heart, ArrowRight, Menu, X, MessageCircle } from "lucide-react"
+import { CheckCircle, Clock, Star, Shield, Zap, Heart, ArrowRight, Menu, X } from "lucide-react"
+import ContactForm from "@/components/ContactForm"
 
 export default function LibreFondoLanding() {
   const [activeSection, setActiveSection] = useState("hero")
@@ -85,7 +83,7 @@ export default function LibreFondoLanding() {
             <img
               src="/images/design-mode/logolibre.png"
               alt="LibreFondo"
-              className="h-8 w-auto logo-hover"
+              className="h-12 w-auto logo-hover"
             />
           </div>
 
@@ -160,7 +158,9 @@ export default function LibreFondoLanding() {
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg whatsapp-float flex items-center justify-center"
         >
-          <MessageCircle className="h-6 w-6" />
+          <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+          </svg>
         </a>
       </div>
 
@@ -176,7 +176,7 @@ export default function LibreFondoLanding() {
                 Tu dinero, ahora <span className="gradient-text">libre</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground text-pretty animate-on-scroll stagger-1">
-                Accede fácil a tus cesantías de Porvenir, Protección, Colfondos y FNA con nuestro acompañamiento
+                Retira fácil a tus <span className="text-primary font-semibold">cesantías</span> de Porvenir, Protección, Colfondos y FNA con nuestro acompañamiento
               </p>
             </div>
 
@@ -298,7 +298,7 @@ export default function LibreFondoLanding() {
               Te acompañamos en <span className="text-primary">3 pasos simples</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              El proceso más fácil que hayas visto para acceder a tu dinero
+              El proceso más fácil para acceder a tu dinero
             </p>
           </div>
 
@@ -335,8 +335,8 @@ export default function LibreFondoLanding() {
                 />
               </div>
               <div>
-                <h3 className="text-xl font-heading font-semibold mb-2">Te guiamos personalizado</h3>
-                <p className="text-muted-foreground">Te acompañamos por WhatsApp paso a paso</p>
+                <h3 className="text-xl font-heading font-semibold mb-2">Guía personalizada</h3>
+                <p className="text-muted-foreground">Te acompañamos por WhatsApp en cada paso</p>
               </div>
             </div>
 
@@ -380,7 +380,7 @@ export default function LibreFondoLanding() {
                   ))}
                 </div>
                 <blockquote className="text-lg italic">
-                  "Pensé que era imposible, ¡y en una semana tenía mi dinero libre!"
+                  "Llevaba 3 años intentando sacar mis cesantías de Porvenir y siempre me decían que no podía. Con LibreFondo lo logré en 5 días. No puedo creer que fuera tan fácil."
                 </blockquote>
                 <div className="flex items-center space-x-4">
                   <img
@@ -404,7 +404,7 @@ export default function LibreFondoLanding() {
                   ))}
                 </div>
                 <blockquote className="text-lg italic">
-                  "Con esto pagué mi maestría sin un solo dolor de cabeza"
+                  "Necesitaba $8 millones para la matrícula de mi especialización y no sabía de dónde sacarlos. Mis cesantías estaban ahí pero no sabía cómo retirarlas. LibreFondo me ayudó y en una semana ya tenía el dinero en mi cuenta."
                 </blockquote>
                 <div className="flex items-center space-x-4">
                   <img
@@ -428,7 +428,7 @@ export default function LibreFondoLanding() {
                   ))}
                 </div>
                 <blockquote className="text-lg italic">
-                  "Gracias a esta solución, emprendí mi propio negocio"
+                  "Siempre quise poner mi restaurante pero no tenía capital. Mis cesantías eran $12 millones pero pensé que no las podía tocar hasta jubilarme. LibreFondo me explicó que sí podía usarlas y ahora tengo mi negocio funcionando."
                 </blockquote>
                 <div className="flex items-center space-x-4">
                   <img
@@ -459,66 +459,7 @@ export default function LibreFondoLanding() {
               </p>
             </div>
 
-            <Card className="p-8 animate-on-scroll-right">
-              <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="nombre">Nombre completo</Label>
-                    <Input id="nombre" placeholder="Tu nombre completo" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="whatsapp">WhatsApp</Label>
-                    <Input id="whatsapp" placeholder="+57 300 123 4567" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="correo">Correo electrónico</Label>
-                  <Input id="correo" type="email" placeholder="tu@email.com" />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="fondo">Fondo de cesantías</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Selecciona tu fondo" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="porvenir">Porvenir</SelectItem>
-                        <SelectItem value="proteccion">Protección</SelectItem>
-                        <SelectItem value="colfondos">Colfondos</SelectItem>
-                        <SelectItem value="fna">FNA</SelectItem>
-                        <SelectItem value="otro">Otro</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="valor">Valor aproximado</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Rango de valor" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="1-5">$1M - $5M COP</SelectItem>
-                        <SelectItem value="5-10">$5M - $10M COP</SelectItem>
-                        <SelectItem value="10-20">$10M - $20M COP</SelectItem>
-                        <SelectItem value="20+">Más de $20M COP</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <Button className="w-full bg-gradient-primary hover:opacity-90 text-lg py-6">
-                  Desbloquear mi dinero
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-
-                <p className="text-sm text-muted-foreground text-center">
-                  Al enviar, aceptas nuestros términos y condiciones y política de privacidad
-                </p>
-              </CardContent>
-            </Card>
+            <ContactForm variant="card" />
           </div>
 
           <div className="relative animate-on-scroll-scale">
@@ -547,17 +488,17 @@ export default function LibreFondoLanding() {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            <div className="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-24 hover-lift animate-on-scroll stagger-1">
-              <img src="/porvenir-logo.jpg" alt="Porvenir" className="max-h-16 w-auto object-contain hover-scale" />
+            <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center h-40 hover-lift animate-on-scroll stagger-1">
+              <img src="/porvenir-logo.jpg" alt="Porvenir" className="max-h-32 w-auto object-contain hover-scale" />
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-24 hover-lift animate-on-scroll stagger-2">
-              <img src="/proteccion-logo.jpg" alt="Protección" className="max-h-16 w-auto object-contain hover-scale" />
+            <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center h-40 hover-lift animate-on-scroll stagger-2">
+              <img src="/proteccion-logo.jpg" alt="Protección" className="max-h-32 w-auto object-contain hover-scale" />
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-24 hover-lift animate-on-scroll stagger-3">
-              <img src="/colfondos-logo.jpg" alt="Colfondos" className="max-h-16 w-auto object-contain hover-scale" />
+            <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center h-40 hover-lift animate-on-scroll stagger-3">
+              <img src="/colfondos-logo.jpg" alt="Colfondos" className="max-h-32 w-auto object-contain hover-scale" />
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-24 hover-lift animate-on-scroll stagger-4">
-              <img src="/fna-logo.jpg" alt="FNA" className="max-h-16 w-auto object-contain hover-scale" />
+            <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center h-40 hover-lift animate-on-scroll stagger-4">
+              <img src="/fna-logo.jpg" alt="FNA" className="max-h-32 w-auto object-contain hover-scale" />
             </div>
           </div>
         </div>
@@ -624,8 +565,7 @@ export default function LibreFondoLanding() {
                     ¿Cuánto cuesta mi servicio?
                   </AccordionTrigger>
                   <AccordionContent>
-                    Solo cobramos una comisión por éxito. Si no logras retirar tu dinero, no pagas nada. Sin costos
-                    ocultos.
+                    Solo cobramos una comisión por éxito. Si no logras retirar tu dinero, no pagas nada. Sin costos ocultos.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -782,68 +722,11 @@ export default function LibreFondoLanding() {
       <Dialog open={isFormModalOpen} onOpenChange={setIsFormModalOpen}>
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto modal-content">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-heading">¿Listo para desbloquear tu dinero?</DialogTitle>
-            <p className="text-muted-foreground">Te contactamos en menos de 24 horas para ayudarte</p>
+            <DialogTitle className="text-2xl font-heading">Completa tu solicitud</DialogTitle>
+            <p className="text-muted-foreground">Descubre si eres viable en minutos</p>
           </DialogHeader>
 
-          <div className="space-y-6 py-4">
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="nombre">Tu nombre completo</Label>
-                <Input id="nombre" placeholder="Escribe tu nombre completo" className="input-focus" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="whatsapp">Tu WhatsApp</Label>
-                <Input id="whatsapp" placeholder="+57 300 123 4567" className="input-focus" />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="correo">Tu correo electrónico</Label>
-              <Input id="correo" type="email" placeholder="tu@email.com" className="input-focus" />
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="fondo">Tu fondo de cesantías</Label>
-                <Select>
-                  <SelectTrigger className="input-focus">
-                    <SelectValue placeholder="Selecciona tu fondo" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="porvenir">Porvenir</SelectItem>
-                    <SelectItem value="proteccion">Protección</SelectItem>
-                    <SelectItem value="colfondos">Colfondos</SelectItem>
-                    <SelectItem value="fna">FNA</SelectItem>
-                    <SelectItem value="otro">Otro</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="valor">Valor aproximado</Label>
-                <Select>
-                  <SelectTrigger className="input-focus">
-                    <SelectValue placeholder="Rango de valor" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="1-5">$1M - $5M COP</SelectItem>
-                    <SelectItem value="5-10">$5M - $10M COP</SelectItem>
-                    <SelectItem value="10-20">$10M - $20M COP</SelectItem>
-                    <SelectItem value="20+">Más de $20M COP</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-
-            <Button className="w-full bg-gradient-primary hover:opacity-90 text-lg py-6 btn-animate hover-glow">
-              Quiero desbloquear mi dinero ya
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-
-            <p className="text-sm text-muted-foreground text-center">
-              Al enviar, aceptas nuestros términos y condiciones y política de privacidad
-            </p>
-          </div>
+          <ContactForm variant="modal" />
         </DialogContent>
       </Dialog>
     </div>

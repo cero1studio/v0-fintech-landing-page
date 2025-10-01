@@ -22,7 +22,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "LibreFondo - Desbloquea tu dinero, úsalo como quieras",
   description:
-    "Accede fácil a tus cesantías de Porvenir, Protección, Colfondos y FNA. Trámite ágil y asesoría personalizada.",
+    "Retira fácil a tus cesantías de Porvenir, Protección, Colfondos y FNA. Trámite ágil y asesoría personalizada.",
   generator: "v0.app",
   keywords: "cesantías, LibreFondo, Porvenir, Protección, Colfondos, FNA, retiro cesantías",
 }
