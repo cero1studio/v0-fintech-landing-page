@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Poppins, Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import Script from "next/script"
 import "./globals.css"
 
 const poppins = Poppins({
@@ -35,6 +36,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${poppins.variable} ${montserrat.variable}`}>
       <body className="font-sans antialiased">
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-640678699" />
+        <Script id="gtag-init" strategy="afterInteractive">{`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-640678699');
+        `}</Script>
         <Suspense fallback={<div>Loading...</div>}>
           {children}
           <Analytics />
